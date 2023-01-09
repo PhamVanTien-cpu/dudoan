@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+    <title>dudoanbenhdoquy</title>
+    <style>
+     /* reset css */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+  background-color: #ffffff;
+}
+/* ol,
+ul {
+  list-style: none;
+} */
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.form {
+  width: 62%;
+  /* height: 70rem; */
+  margin-top: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+.form1 {
+  display: inline-block;
+  width: 49.6%;
+  /* height: 69rem; */
+  margin-right: auto;
+  border: 0.15rem solid rgb(104, 104, 104);
+  border-right: 0.2rem solid rgb(104, 104, 104);
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  background-color: #f1f1f1;
+}
+.form1_title {
+  width: 78%;
+  font-size: 20px;
+  font-weight: 600;
+  color: #4f4d4d;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding: 0.75rem 0;
+  border-bottom: 0.15rem solid rgb(104, 104, 104);
+  text-align: center;
+}
+.form1_content {
+  margin-top: 3.5rem;
+  position: relative;
+}
+.content_age {
+  /* background: rgb(228, 165, 165); */
+  width: 100%;
+}
+.content_title {
+  width: 20%;
+  font-size: 15px;
+  padding-left: 5rem;
+  display: inline-block;
+}
+.content_input {
+  width: 50%;
+}
+.content_icon {
+  width: 10%;
+  text-align: center;
+}
+.content_button {
+  text-align: center;
+}
+.content_button button {
+  width: 12.5rem;
+  height: 3.5rem;
+}
+.content_answer {
+  width: 35rem;
+  height: 10rem;
+  border: 0.25rem solid black;
+  border-radius: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.content_answer h3 {
+  color: violet;
+  font-size: 2rem;
+  font-weight: 900;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+}
+/* pusudu */
+.note {
+  position: absolute;
+  top: 1.5rem;
+  right: 0;
+  width: 7.5rem;
+  height: 2.5rem;
+  border: 0.05rem solid rgb(104, 104, 104);
+  z-index: 2;
+  display: none;
+}
+.note h6 {
+  text-align: center;
+  margin-top: 0.75rem;
+}
+.content_icon_age:hover .note {
+  display: block;
+}
+
+.form2 {
+  display: inline-block;
+  width: 49.6%;
+  /* height: 69rem; */
+  margin-left: auto;
+  border: 0.15rem solid rgb(104, 104, 104);
+  border-left: 0.2rem solid rgb(104, 104, 104);
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: #f1f1f1;
+}
+
+.form2_title {
+  width: 85%;
+  font-size: 20px;
+  font-weight: 600;
+  color: #4f4d4d;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  padding: 0.75rem 0;
+  border-bottom: 0.15rem solid rgb(104, 104, 104);
+  text-align: center;
+}
+
+.form2_content {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.5rem;
+  font-size: 15px;
+}
+
+.content_explain ul li {
+  margin-left: 8rem;
+  margin-top: 0.75rem;
+  font-size: 13.5px;
+}
+
+@media screen and (max-width: 1250px) {
+  .form {
+    width: 99%;
+    margin-top: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: contents;
+  }
+  .form1 {
+    display: inline-block;
+    width: 98%;
+    /* height: 69rem; */
+    margin-left: auto;
+    margin-right: auto;
+    border: 0.15rem solid rgb(104, 104, 104);
+    border-left: 0.2rem solid rgb(104, 104, 104);
+    border-radius: 1rem;
+    background-color: #f1f1f1;
+    margin-bottom: 0.5rem;
+  }
+  .form2 {
+    display: inline-block;
+    width: 98%;
+    /* height: 69rem; */
+    margin-left: auto;
+    margin-right: auto;
+    border: 0.15rem solid rgb(104, 104, 104);
+    border-left: 0.2rem solid rgb(104, 104, 104);
+    border-radius: 1rem;
+    background-color: #f1f1f1;
+  }
+  .content_answer {
+    width: 90%;
+    /* height: 10rem; */
+    border: 0.25rem solid black;
+    border-radius: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+}
+
+  </style>
+  </head>
+  <body>
+    <div class="form">
+      <div class="form1">
+          <div class="form1_title">
+            <h1>FORM DỰ ĐOÁN NGUY CƠ ĐỘT QUỴ</h1>
+          </div>
+          <div class="form1_content">
+            <form action="{{ url_for('predict')}}" method="post">
+              <div class="content_age">
+                <label class="content_title">Tuổi</label>
+                <input
+                  onchange="condition1()"
+                  id="n1"
+                  class="content_input"
+                  type="text"
+                  name="tuoi"
+                  required="required"
+                  min="0"
+                  max="120"
+                />
+                  <i
+                    class="fa fa-question-circle content_icon content_icon_age"
+                    aria-hidden="true"
+                  ></i>
+                </div>
+              </div>
+              <br />
+              <br />
+              <div class="content_sex">
+                <label class="content_title">Giới Tính</label>
+                <input
+                  onchange="condition2()"
+                  id="n2"
+                  class="content_input"
+                  type="text"
+                  name="gioitinh"
+                  required="required"
+                  min="0"
+                  max="3"
+                />
+                <i
+                  class="fa fa-question-circle content_icon"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <br />
+              <br />
+              <div class="content_bmi">
+                <label class="content_title">Chỉ Số Khối</label>
+                <input
+                  onchange="condition3()"
+                  id="n3"
+                  class="content_input"
+                  type="text"
+                  name="chisokhoi"                 
+                  required="required"
+                  min="0"
+                  max="50"
+                />
+                <i
+                  class="fa fa-question-circle content_icon"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <br />
+              <br />
+              <div class="content_heartbeat">
+                <label class="content_title">Nhịp Tim</label>
+                <input
+                  onchange="condition4()"
+                  id="n4"
+                  class="content_input"
+                  type="text"
+                  name="nhiptim"                
+                  required="required"
+                  min="0"
+                />
+                <i
+                  class="fa fa-question-circle content_icon"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <br />
+              <br />
+              <div class="content_blood_pressure">
+                <label class="content_title">Huyết Áp</label>
+                <input
+                  onchange="condition5()"
+                  id="n5"
+                  class="content_input"
+                  type="text"
+                  name="huyetap"              
+                  required="required"
+                  min="0"                  
+                />
+                <i
+                  class="fa fa-question-circle content_icon"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <br />
+              <br />
+              <div class="content_blood_sugar">
+                <label class="content_title">Đường Máu</label>
+                <input
+                  onchange="condition6()"
+                  id="n6"
+                  class="content_input"
+                  type="text"
+                  name="duongmau"                
+                  required="required"
+                  min="0"               
+                />
+                <i
+                  class="fa fa-question-circle content_icon"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <br />
+              <br />
+              <div class="content_cholesterol">
+                <label class="content_title">Cholesterol</label>
+                <input
+                  onchange="condition7()"
+                  id="n7"
+                  class="content_input"
+                  type="text"
+                  name="cholesterol"                
+                  required="required"
+                  min="0"
+                />
+                <i
+                  class="fa fa-question-circle content_icon"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <br />
+              <br />
+              <div class="content_triglycerid">
+                <label class="content_title">Triglycerid</label>
+                <input
+                  onchange="condition8()"
+                  id="n8"
+                  class="content_input"
+                  type="text"
+                  name="triglycerid"                
+                  required="required"
+                  min="0"
+                />
+                <i
+                  class="fa fa-question-circle content_icon"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <br />
+              <br />
+              <div class="content_anamnesis">
+                <label class="content_title">Tiền Sử Bệnh</label>
+                <input
+                  onchange="condition9()"
+                  id="n9"
+                  class="content_input"
+                  type="text"
+                  name="tiensubenh"              
+                  required="required"
+                  min="0"
+                />
+                <i
+                  class="fa fa-question-circle content_icon"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <br />
+              <br />
+              <div class="content_ranKin">
+                <label class="content_title">RanKin</label>
+                <input
+                  onchange="condition10()"
+                  id="n10"
+                  class="content_input"
+                  type="text"
+                  name="RANKIN"
+                  required="required"
+                  min="0"
+                  max="6"
+                />
+                <i
+                  class="fa fa-question-circle content_icon"
+                  aria-hidden="true"
+                ></i>
+              </div>
+              <br />
+              <br />
+              <br />
+              <div class="content_button">
+                <button type="submit">
+                  <i class="fa fa-search" aria-hidden="true"></i> &ensp;Chuẩn Đoán
+                </button>
+              </div>
+            </form>
+            <br />
+            <br />
+            <div class="content_answer">
+              <h3>{{ prediction_text }}</h3>
+            </div>
+          </div>
+      <div class="form2">
+        <div class="form2_title">
+          <h1>HƯỚNG DẪN SỬ DỤNG</h1>
+        </div>
+        <div class="form2_content">
+          <!-- <div class="content_explain">
+            <h3>Tuổi :</h3>
+            <ul>
+              <li>Nhập số tuổi của bạn . vd : 75 , 78 ,... </li>
+            </ul>  
+          </div> -->
+          <br>
+          <div class="content_explain">
+            <h3>Giới Tính :</h3>
+            <ul>
+              <li> Nhập số [1] nếu bạn là Nam . </li>
+              <li> Nhập số [2] nếu bạn là Nữ .</li>
+            </ul>  
+          </div>
+          <br>
+          <div class="content_explain">
+            <h3>Chỉ Số Khối :</h3>
+            <ul>
+              <li>Chỉ số khối = cân nặng : [ chiều cao  x  2 ]. </li>
+            </ul>  
+          </div>
+          <!-- <br>
+          <div class="content_explain">
+            <h3>Nhịp Tim :</h3>
+            <ul>
+              <li>Nhập chỉ số nhịp tim của bạn . vd : 87 , 88 ,... </li>
+            </ul>  
+          </div>
+          <br>
+          <div class="content_explain">
+            <h3>Huyết Áp :</h3>
+            <ul>
+              <li>Nhập chỉ số huyết áp của bạn . vd : 120 , 140 ,... </li>
+            </ul>  
+          </div>
+          <br>
+          <div class="content_explain">
+            <h3>Đường Máu :</h3>
+            <ul>
+              <li>Nhập chỉ số đường máu của bạn . vd : 5.6 , 6.5 ,... </li>
+            </ul>  
+          </div>
+          <br>
+          <div class="content_explain">
+            <h3>Cholesterol :</h3>
+            <ul>
+              <li>Nhập chỉ số Cholesterol của bạn . vd : 5.6 , 6.5 ,... </li>
+            </ul>  
+          </div>
+          <br>
+          <div class="content_explain">
+            <h3>Triglycerid :</h3>
+            <ul>
+              <li>Nhập chỉ số Triglycerid của bạn . vd : 1.2 , 1.6 ,... </li>
+            </ul>  
+          </div> -->
+          <br>
+          <div class="content_explain">
+            <h3>Tiền Sử Bệnh :</h3>
+            <ul>
+              <li>Nhập chỉ số Lần đã từng bị đột quỵ ví dụ : </li>
+              <li>Nhập số [0] chưa từng bị đột quỵ. </li>
+              <li>Nhập số [1] với 1 Lần đã từng bị đột quỵ. </li>
+              <li>Nhập số [2] với 2 Lần đã từng bị đột quỵ. </li>
+            </ul>  
+          </div>
+          <br>
+          <div class="content_explain">
+            <h3>RanKin  [ Thang Điểm Nhận Thức ] :</h3>
+            <ul>
+              <li>Nhập số [0] với biểu hiện nhận thức bình thường. </li>
+              <li>Nhập số [1] triệu chứng nhẹ về thần kinh nhưng vẫn có khả năng làm những việc hàng ngày. </li>
+              <li>Nhập số [2] di chứng nhẹ biểu hiện như không còn khả năng làm những việc như trước kia.</li>
+              <li>Nhập số [3] di chứng vừa biểu hiện như cần sự giúp đỡ nhất định nhưng vẫn có thể đi lại. </li>
+              <li>Nhập số [4] di chứng tương đối nặng biểu hiện như không tư đi lại , không tự phục vụ. </li>
+              <li>Nhập số [5] di chứng nặng biểu hiện như liệt giường vệ sinh không tự chủ. </li>
+            </ul>  
+          </div>
+          <br>
+          <div class="content_explain">
+            <h2>LỜI KHUYÊN</h2>
+            <ul>
+              <li> Trường Hợp gặp các triệu chứng :  Cơ thể mệt mỏi, đột nhiên cảm thấy không còn sức lực, tê cứng mặt hoặc một nửa mặt, nụ cười bị méo mó, cử động khó khăn.</li>
+              <li> Trường Hợp dự đoán "Bệnh nhân có nguy cơ độ quỵ cao." </li>
+            </ul>
+            <br>
+            <h4 style="margin-left: 6.5rem;"><i class="fa fa-arrow-right" aria-hidden="true"></i> &nbsp; Khả năng cao của các triệu chứng khởi phát độ quỵ , cần đến ngay cơ sở Y Tế gần nhất để thăm khám.</h4>  
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function condition1(){
+        var x = document.getElementById('n1').value;
+        if((isNaN(x)) || (x <= 0)){
+          document.getElementById('n1').style.borderColor = 'red';
+        }
+        else{
+          document.getElementById('n1').style.borderColor = '#04aa6d';
+        }
+      }
+
+      function condition2(){
+        var x = document.getElementById('n2').value;
+        if((isNaN(x)) || (x != 1) && (x != 2)){
+          document.getElementById('n2').style.borderColor = 'red';
+        }
+        else{
+          document.getElementById('n2').style.borderColor = '#04aa6d';
+        }
+      }
+
+      function condition3(){
+        var x = document.getElementById('n3').value;
+        if((isNaN(x)) || (x <= 0)){
+          document.getElementById('n3').style.borderColor = 'red';
+        }
+        else{
+          document.getElementById('n3').style.borderColor = '#04aa6d';
+        }
+      }
+
+      function condition4(){
+        var x = document.getElementById('n4').value;
+        if((isNaN(x)) || (x <= 0)){
+          document.getElementById('n4').style.borderColor = 'red';
+        }
+        else{
+          document.getElementById('n4').style.borderColor = '#04aa6d';
+        }
+      }
+
+      function condition5(){
+        var x = document.getElementById('n5').value;
+        if((isNaN(x)) || (x <= 0)){
+          document.getElementById('n5').style.borderColor = 'red';
+        }
+        else{
+          document.getElementById('n5').style.borderColor = '#04aa6d';
+        }
+      }
+
+      function condition6(){
+        var x = document.getElementById('n6').value;
+        if((isNaN(x)) || (x <= 0)){
+          document.getElementById('n6').style.borderColor = 'red';
+        }
+        else{
+          document.getElementById('n6').style.borderColor = '#04aa6d';
+        }
+      }
+
+      function condition7(){
+        var x = document.getElementById('n7').value;
+        if((isNaN(x)) || (x <= 0)){
+          document.getElementById('n7').style.borderColor = 'red';
+        }
+        else{
+          document.getElementById('n7').style.borderColor = '#04aa6d';
+        }
+      }
+
+      function condition8(){
+        var x = document.getElementById('n8').value;
+        if((isNaN(x)) || (x <= 0)){
+          document.getElementById('n8').style.borderColor = 'red';
+        }
+        else{
+          document.getElementById('n8').style.borderColor = '#04aa6d';
+        }
+      }
+
+      function condition9(){
+        var x = document.getElementById('n9').value;
+        if((isNaN(x)) || (x < 0)){
+          document.getElementById('n9').style.borderColor = 'red';
+        }
+        else{
+          document.getElementById('n9').style.borderColor = '#04aa6d';
+        }
+      }
+
+      function condition10(){
+        var x = document.getElementById('n10').value;
+        if((isNaN(x)) || (x < 0) || (x > 5)){
+          document.getElementById('n10').style.borderColor = 'red';
+        }
+        else{
+          document.getElementById('n10').style.borderColor = '#04aa6d';
+        }
+      }
+      
+
+    </script>
+  </body>
+</html>
